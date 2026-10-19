@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 /** The menu button and sheet shown below 900px. Esc and any link close it. */
-export function MobileNav({ links }: { links: ReadonlyArray<{ href: string; label: string }> }): React.JSX.Element {
+export function MobileNav({ links, logInUrl }: { links: ReadonlyArray<{ href: string; label: string }>; logInUrl: string }): React.JSX.Element {
   const [open, setOpen] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
   const sheet = useRef<HTMLDivElement>(null);
@@ -60,6 +60,9 @@ export function MobileNav({ links }: { links: ReadonlyArray<{ href: string; labe
               </a>
             </li>
           ))}
+          <li>
+            <a href={logInUrl}>Log in</a>
+          </li>
         </ul>
       </div>
     </>

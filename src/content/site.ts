@@ -8,9 +8,11 @@ export const site = {
   url: 'https://kownt.ai',
   /** Where every "Get started" button goes. */
   getStartedUrl: 'https://app.kownt.ai',
+  logInUrl: 'https://app.kownt.ai/login',
+  demoUrl: 'mailto:info@kownt.ai?subject=Book%20a%20kownt.ai%20demo',
   tagline: 'Your accounts. Your tax. Just ask.',
   description:
-    'Bookkeeping, VAT, invoices and tax for UK businesses, with an AI accountant you can just ask. Bank feeds, receipt scanning and Making Tax Digital in one place.',
+    'Meet your AI accountant. kownt.ai automates bookkeeping, organises transactions and turns your financial data into clear business insights for UK businesses, landlords and accountants.',
   /** The one contact address used everywhere on the site (support, privacy, practices). */
   email: 'info@kownt.ai',
   owner: {

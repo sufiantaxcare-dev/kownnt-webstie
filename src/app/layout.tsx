@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, IBM_Plex_Sans } from 'next/font/google';
+import { Manrope, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { site } from '@/content/site';
 import { Header } from '@/components/header';
@@ -9,12 +9,12 @@ import { SiteMotion } from '@/components/site-motion';
 import { OG_IMAGE } from '@/lib/seo';
 
 // Self-hosted by next/font at build time: no request to Google from visitors' browsers.
-const display = Bricolage_Grotesque({ subsets: ['latin'], display: 'swap', variable: '--k-font-display', weight: ['500', '600', '700'] });
-const body = IBM_Plex_Sans({ subsets: ['latin'], display: 'swap', variable: '--k-font-body', weight: ['400', '500', '600'] });
+const display = Plus_Jakarta_Sans({ subsets: ['latin'], display: 'swap', variable: '--k-font-display', weight: ['600', '700', '800'] });
+const body = Manrope({ subsets: ['latin'], display: 'swap', variable: '--k-font-body', weight: ['400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name}: AI accounting and tax for UK businesses`, template: `%s | ${site.name}` },
+  title: { default: `${site.name}: AI accounting software for UK businesses`, template: `%s | ${site.name}` },
   description: site.description,
   applicationName: site.name,
   authors: [{ name: site.owner.legalName, url: site.owner.website }],
@@ -23,8 +23,9 @@ export const metadata: Metadata = {
     'AI accounting software UK',
     'AI accountant',
     'bookkeeping software',
-    'Making Tax Digital VAT software',
-    'VAT return software',
+    'AI bookkeeping',
+    'VAT preparation software',
+    'accounting software for landlords',
     'invoicing software UK',
     'receipt scanning app',
     'Open Banking bookkeeping',
@@ -48,10 +49,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f4f8fc' },
-    { media: '(prefers-color-scheme: dark)', color: '#071526' },
-  ],
+  themeColor: '#050a1c',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {

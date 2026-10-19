@@ -3,11 +3,9 @@ import { BrandLockup } from './brand';
 import { MobileNav } from './mobile-nav';
 
 export const NAV_LINKS = [
-  { href: '/#features', label: 'Features' },
-  { href: '/#how-it-works', label: 'How it works' },
-  { href: '/#email', label: 'Business email' },
-  { href: '/#security', label: 'Security' },
-  { href: '/#faq', label: 'FAQ' },
+  { href: '/product', label: 'Product' },
+  { href: '/#solutions', label: 'Solutions' },
+  { href: '/resources', label: 'Resources' },
 ] as const;
 
 export function Header(): React.JSX.Element {
@@ -25,10 +23,13 @@ export function Header(): React.JSX.Element {
           </ul>
         </nav>
         <div className="k-header-actions">
-          <a className="k-btn k-btn-primary k-btn-sm" href={site.getStartedUrl}>
-            Get started
+          <a className="k-link-quiet k-hide-sm" href={site.logInUrl}>
+            Log in
           </a>
-          <MobileNav links={NAV_LINKS} />
+          <a className="k-btn k-btn-white k-btn-sm" href={site.getStartedUrl}>
+            Get started <span aria-hidden>→</span>
+          </a>
+          <MobileNav links={NAV_LINKS} logInUrl={site.logInUrl} />
         </div>
       </div>
       <span className="k-progress" aria-hidden />
