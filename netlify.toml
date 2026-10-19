@@ -1,0 +1,7 @@
+# Netlify: build the static site and publish out/. Headers live in public/_headers.
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
